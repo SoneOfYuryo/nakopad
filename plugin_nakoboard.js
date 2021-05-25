@@ -321,6 +321,7 @@ const PluginNakoBoard = {
 			return -2;
 		};
 	},
+	return_none: false
   }
 
 }
