@@ -288,7 +288,7 @@ const PluginNakoBoard = {
   'センサ1測定': {
     type: 'func',
     josi: [],
-    return_none: false,
+    return_none: true,
     pure: true,
     fn: function (sys) { 
     	ChkHIDItem();
@@ -309,13 +309,11 @@ const PluginNakoBoard = {
 			device.sendReport(outputReportId, outputReport);
 			
 			// recieve
-			//WaitForInputReport()		// イベント発生まで待つ
-			/*.then( (resolve, reject) => {
+			WaitForInputReport()		// イベント発生まで待つ
+			.then( (resolve, reject) => {
 				console.log( `result: ${ADval}` );
 				resolve(ADval);
 			});
-			*/
-			sleep(500);
 			AD1input();
 			console.log( `result: ${ADval}` );
 			return ADval;
@@ -323,7 +321,6 @@ const PluginNakoBoard = {
 			return -2;
 		};
 	},
-	return_none: false
   }
 
 }
