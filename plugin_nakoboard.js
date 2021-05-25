@@ -314,6 +314,7 @@ const PluginNakoBoard = {
 				console.log( `result: ${ADval}` );
 				resolve(ADval);
 			});
+
 			AD1input();
 			console.log( `result: ${ADval}` );
 			return ADval;
@@ -321,7 +322,7 @@ const PluginNakoBoard = {
 			return -2;
 		};
 	},
-	return_none: true
+	return_none: false
   }
 
 }
