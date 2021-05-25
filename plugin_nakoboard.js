@@ -288,6 +288,7 @@ const PluginNakoBoard = {
   'センサ1測定': {
     type: 'func',
     josi: [],
+    uses: [],
     return_none: true,
     pure: true,
     fn: function (sys) { 
